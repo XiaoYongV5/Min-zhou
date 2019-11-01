@@ -1,0 +1,22 @@
+<image class="background-image" src="../../images/bg1.png"></image>
+<view class="container">
+<!--   背景音乐  -->
+<view class='bgmView' catchtap='BGM'>
+<!-- <audio  src="{{mp3}}" id="myAudio" ></audio> -->
+  <image wx:if='{{bgm}}' class='bgmImg {{bgmImgAni}}' src='/images/kaishi.png'></image>
+  <image wx:else class='bgmImg' src='/images/zanting.png'></image>
+</view>
+    <view class="search-body">
+        <input type="text" bindinput="changeSearchKey" placeholder="告诉周公你梦到了什么" confirm-type="search" bindconfirm="searchTap" />
+        <view class="search-body-icon">
+            <image bindtap="searchTap" src="../../images/search-btn.png"></image>
+        </view>
+    </view>
+    <view class="weui-footer weui-footer_fixed-bottom">
+        <view class="weui-footer__text leo-footer">
+            <navigator url="../leo/leo" hover-class="navigator-hover">
+                关于
+            </navigator>
+        </view>
+    </view>
+</view>
